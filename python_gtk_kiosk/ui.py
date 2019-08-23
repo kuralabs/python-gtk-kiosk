@@ -2,9 +2,7 @@
 App main UI module.
 """
 
-from queue import Queue
 from logging import getLogger
-from datetime import datetime, date
 
 from pkg_resources import resource_filename
 
@@ -28,15 +26,15 @@ class AppUI:
 
         # Build GUI from Glade file
         self._builder = Gtk.Builder()
-        self._ui_file = resource_filename(__package__, 'data/ui.glade')
-        self._builder.add_from_file(self._ui_file)
+        self._builder.add_from_file(
+            resource_filename(__package__, 'data/ui.glade')
+        )
 
         # Setup style provider to use CSS
         style_provider = Gtk.CssProvider()
-
-        style = resource_filename(__package__, 'data/assets/style.css')
-        style_provider.load_from_path(style)
-
+        style_provider.load_from_path(
+            resource_filename(__package__, 'data/assets/style.css')
+        )
         Gtk.StyleContext.add_provider_for_screen(
             Gdk.Screen.get_default(),
             style_provider,
@@ -53,9 +51,8 @@ class AppUI:
 
         self._window = go('window')
 
-        # Screens
-
         # UI elements
+        self._dialog = go('my_dialog')
 
         # Connect signals
         self._builder.connect_signals(self)
@@ -92,6 +89,12 @@ class AppUI:
         # any of the fonts included in that dir
         fontdir = resource_filename(__package__, 'data/assets/fonts')
         self._fontconfig.FcConfigAppFontAddDir(config, fontdir.encode())
+
+    def _show_dialog_cb(self, widget, data=None):
+        self._dialog.show()
+
+    def _close_dialog_cb(self, widget, data=None):
+        self._dialog.hide()
 
     def start(self):
         try:

@@ -1,0 +1,67 @@
+window.background {
+    color: #EEEEEC;
+    background-color: #191919;
+}
+
+label {
+    color: #E74953;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Lato';
+}
+
+entry {
+    background-color: #2E3436;
+    background: #2E3436;
+    color: #EEEEEC;
+}
+
+button.my-button {
+    background-color: #2E3436;
+    background: #2E3436;
+}
+
+button.my-button label {
+    color: #EEEEEC;
+}
+
+button.my-button-ok label {
+    color: #0F8B83;
+}
+
+.screen-header {
+    font-size: 3.0em;
+    color: #E74953;
+    font-family: 'Bebas Neue';
+}
+
+.my-label {
+    font-size: 2.0em;
+}
+
+.label-a {
+    font-family: 'Bebas Neue';
+    color: #EC7432;
+}
+
+.label-b {
+    font-family: 'Fjalla One';
+    color: #0F8B83;
+}
+
+.label-c {
+    font-family: 'Fira Mono';
+    color: #732563;
+    font-size: 1.5em;
+}
+
+.label-d {
+    font-family: 'Bebas Neue';
+    color: #E74953;
+}
+
+.my-input {
+    font-family: 'Fira Mono';
+    font-size: 1.5em;
+    color: #732563;
+}
