@@ -14,7 +14,7 @@ This is particularly suited to be used in a Raspberry Pi.
 
 
 Kiosk Mode Setup
-----------------
+================
 
 #. Install dependencies:
 
@@ -33,7 +33,6 @@ Kiosk Mode Setup
 
    ::
 
-       sudo apt update
        sudo apt install xserver-xorg xinit x11-xserver-utils xdotool xterm
 
    - ``x11-xserver-utils``: to change cursor with ``xsetroot``
@@ -90,19 +89,22 @@ Kiosk Mode Setup
 
 
 Development
------------------------
+===========
 
-This application was coded using Python 3.5 on Ubuntu 18.04. Other OS versions may
-work but are untested.
+This application was coded using Python 3.5 on Ubuntu 18.04. Other OS versions
+may work but are untested.
+
+Install development dependencies
+--------------------------------
 
 ::
 
-    sudo apt install python3-pip python3-gi glade
+    sudo apt install build-essential python3-dev python3-pip python3-gi glade
     sudo pip3 install tox
 
 
 Running App
-===========
+-----------
 
 ::
 
@@ -110,7 +112,7 @@ Running App
 
 
 Build package
-=============
+-------------
 
 This will build the package. Both wheel and source distribution will be
 available under ``dist`` directory.
