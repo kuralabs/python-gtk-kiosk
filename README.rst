@@ -12,6 +12,7 @@ This is particularly suited to be used in a Raspberry Pi.
 
 **Note:** Documentation assumes Raspbian Buster Lite.
 
+
 Kiosk Mode Setup
 ----------------
 
@@ -19,8 +20,7 @@ Kiosk Mode Setup
 
    ::
 
-       sudo apt install glade python3-dev python3-pip python3-gi
-       sudo pip3 install tox
+       sudo apt install build-essential python3-dev python3-gi
 
 #. Enable autologin to CLI:
 
@@ -97,7 +97,7 @@ work but are untested.
 
 ::
 
-    sudo apt install glade python3-dev python3-pip python3-gi
+    sudo apt install python3-pip python3-gi glade
     sudo pip3 install tox
 
 
@@ -107,6 +107,17 @@ Running App
 ::
 
     tox -e run
+
+
+Build package
+=============
+
+This will build the package. Both wheel and source distribution will be
+available under ``dist`` directory.
+
+::
+
+    tox -e build
 
 
 License
