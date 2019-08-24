@@ -238,6 +238,7 @@ setup(
         'Operating System :: POSIX :: Linux',
         'Intended Audience :: Developers',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.5',
     ],
 
     python_requires='>=3.5.0',
